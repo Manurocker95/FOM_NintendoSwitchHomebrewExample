@@ -77,6 +77,7 @@
     <NMakeReBuildCommandLine>make clean all</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>C:\devkitPro\devkitA64\include;C:\devkitPro\libnx\include;$(ProjectDir)\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <IncludePath>C:\devkitPro\portlibs\switch\include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeBuildCommandLine>make</NMakeBuildCommandLine>
@@ -85,6 +86,7 @@
     <NMakeReBuildCommandLine>make clean all</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeIncludeSearchPath>C:\devkitPro\devkitA64\include;C:\devkitPro\libnx\include;$(ProjectDir)\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <IncludePath>C:\devkitPro\portlibs\switch\include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeBuildCommandLine>make</NMakeBuildCommandLine>
