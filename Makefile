@@ -42,7 +42,11 @@ BUILD		:=	Build
 SOURCES		:=	Source
 DATA		:=	Data
 INCLUDES	:=	Include
-ROMFS	    :=	romfs
+ROMFS		:=	Resources
+
+APP_TITLE	:=	Hello World
+APP_AUTHOR	:=	Manu
+APP_VERSION	:=	1.0
 
 #---------------------------------------------------------------------------------
 # options for code generation
