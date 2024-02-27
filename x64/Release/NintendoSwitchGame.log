@@ -1,4 +1,6 @@
 ﻿  MyApplication.cpp
+  Scene.cpp
+  TexturedCubeScene.cpp
   linking NintendoSwitchGame.elf
   Visiting directories...
   Calculating metadata...
