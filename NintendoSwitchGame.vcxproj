@@ -130,6 +130,7 @@
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Common.h" />
     <ClInclude Include="Source\Cube.h" />
+    <ClInclude Include="Source\FragmentShader.h" />
     <ClInclude Include="Source\glad.h" />
     <ClInclude Include="Source\Scene.h" />
     <ClInclude Include="Source\SceneManager.h" />
