@@ -41,7 +41,7 @@ namespace Manurocker95
 
 	void Scene::EndScene()
 	{
-		glfwSetWindowShouldClose(m_window, true);
+		FreeResources();
 	}
 
 	bool Scene::IsKeyPressed(int key)

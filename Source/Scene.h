@@ -11,6 +11,7 @@ namespace Manurocker95
 		double m_startTicks;
 		std::string m_id;
 		bool m_saveStrings = false;
+		bool m_closeApp = false;
 	public:
 		Scene();
 		~Scene();

@@ -1,10 +1,10 @@
-﻿#include "TexturedCubeScene.h"
+﻿#include "SceneManager.h"
 
 constexpr uint32_t WINDOW_WIDTH = 1280;
 constexpr uint32_t WINDOW_HEIGHT = 720;
 constexpr const char* WINDOW_TITLE = "Hello World";
 
-PadState m_pad;
+
 
 bool InitializeOpenGLLibrary()
 {
@@ -55,13 +55,6 @@ void FreeOpenGLLibraries()
 void SwapBuffers(GLFWwindow* _window)
 {
     glfwSwapBuffers(_window);
-}
-
-void InitializeInputs()
-{
-    // Configure our supported input layout: a single player with standard controller styles
-    padConfigureInput(1, HidNpadStyleSet_NpadStandard);
-    padInitializeDefault(&m_pad);
 }
 
 void SaveString(std::string _str)
@@ -122,35 +115,28 @@ int main(int argc, char* argv[])
         return EXIT_FAILURE;
     }
 
-    InitializeInputs();
+    Manurocker95::SceneManager * sceneManager = &Manurocker95::SceneManager::Instance();
+
+    sceneManager->Initialize(window);
 
     DebugOpenGLInfo();
 
-    std::shared_ptr<Manurocker95::TexturedCubeScene> m_currentScene = std::make_shared<Manurocker95::TexturedCubeScene>();
-
-    if (!m_currentScene->Initialize(window))
+    if (!sceneManager->LoadScene(0))
     {
         DebugLog("The scene couldn't be initialized!\n", true);
         glfwTerminate();
         return EXIT_FAILURE;
     }
-         
-    while (m_currentScene->IsApplicationRunning())
+
+    while (sceneManager->NeedToUpdateScene())
     {
-        // Update the scene
-        m_currentScene->Update();
-
-        // Render the scene
-        m_currentScene->Render();
-
-        // Manage key inputs
-        m_currentScene->HandleInputs(&m_pad);
+        sceneManager->UpdateCurrentScene();
 
         /* Swap front and back buffers */
         SwapBuffers(window);
     }
 
-    m_currentScene->FreeResources();
+    sceneManager->FreeResources();
 
     FreeOpenGLLibraries();
 

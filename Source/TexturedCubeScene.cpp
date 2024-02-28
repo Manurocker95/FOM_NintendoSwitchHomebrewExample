@@ -80,7 +80,7 @@ namespace Manurocker95
 
         if (kDown & HidNpadButton_Plus || IsKeyPressed(GLFW_KEY_ESCAPE))
         {
-            EndScene();
+            glfwSetWindowShouldClose(m_window, true);
         }
 
         /* Poll for and process events */
@@ -160,8 +160,8 @@ namespace Manurocker95
     bool TexturedCubeScene::InitializeShaders()
     {
         //We compile our vertex and fragment shaders
-        m_vertexShaderID = LoadShader(RESOURCES_PATH("Shaders/vshader.glsl"), GL_VERTEX_SHADER);
-        m_fragmentShaderID = LoadShader(RESOURCES_PATH("Shaders/fshader.glsl"), GL_FRAGMENT_SHADER);
+        m_vertexShaderID = LoadShader(RESOURCES_PATH("Graphics/Shaders/vshader.glsl"), GL_VERTEX_SHADER);
+        m_fragmentShaderID = LoadShader(RESOURCES_PATH("Graphics/Shaders/fshader.glsl"), GL_FRAGMENT_SHADER);
 
         if (m_vertexShaderID == 0 || m_fragmentShaderID == 0)
         {
@@ -273,7 +273,7 @@ namespace Manurocker95
 
         int width, height, nchan;
         stbi_set_flip_vertically_on_load(true);
-        unsigned char* img = stbi_load(RESOURCES_PATH("Textures/colorMap.png"), &width, &height, &nchan, STBI_rgb_alpha);
+        unsigned char* img = stbi_load(RESOURCES_PATH("Graphics/Textures/colorMap.png"), &width, &height, &nchan, STBI_rgb_alpha);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, img);
         stbi_image_free(img);
 

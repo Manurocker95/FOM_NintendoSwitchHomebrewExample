@@ -1,11 +1,5 @@
-﻿  Camera.cpp
-  Cube.cpp
-  MyApplication.cpp
-  Scene.cpp
-  SceneObject.cpp
-  Sprite.cpp
-  TexturedCubeScene.cpp
-  Transform.cpp
+﻿  MyApplication.cpp
+  SceneManager.cpp
   linking NintendoSwitchGame.elf
   Visiting directories...
   Calculating metadata...

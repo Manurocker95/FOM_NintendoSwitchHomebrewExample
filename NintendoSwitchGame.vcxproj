@@ -110,6 +110,7 @@
     <ClCompile Include="Source\glad.c" />
     <ClCompile Include="Source\MyApplication.cpp" />
     <ClCompile Include="Source\Scene.cpp" />
+    <ClCompile Include="Source\SceneManager.cpp" />
     <ClCompile Include="Source\SceneObject.cpp" />
     <ClCompile Include="Source\Shader.cpp" />
     <ClCompile Include="Source\ShaderSourceCode.cpp" />
@@ -131,6 +132,7 @@
     <ClInclude Include="Source\Cube.h" />
     <ClInclude Include="Source\glad.h" />
     <ClInclude Include="Source\Scene.h" />
+    <ClInclude Include="Source\SceneManager.h" />
     <ClInclude Include="Source\SceneObject.h" />
     <ClInclude Include="Source\Shader.h" />
     <ClInclude Include="Source\ShaderSourceCode.h" />
