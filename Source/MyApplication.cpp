@@ -15,7 +15,7 @@ bool InitializeGLExtensionLibrary()
 {
     // Load OpenGL routines using glad
     gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-
+    
     return true;
 }
 

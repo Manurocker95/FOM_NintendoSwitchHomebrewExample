@@ -105,11 +105,18 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Camera.cpp" />
+    <ClCompile Include="Source\Cube.cpp" />
     <ClCompile Include="Source\glad.c" />
     <ClCompile Include="Source\MyApplication.cpp" />
     <ClCompile Include="Source\Scene.cpp" />
+    <ClCompile Include="Source\SceneObject.cpp" />
+    <ClCompile Include="Source\Shader.cpp" />
+    <ClCompile Include="Source\ShaderSourceCode.cpp" />
+    <ClCompile Include="Source\Sprite.cpp" />
     <ClCompile Include="Source\stb_image.cpp" />
     <ClCompile Include="Source\TexturedCubeScene.cpp" />
+    <ClCompile Include="Source\Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Makefile" />
@@ -119,12 +126,19 @@
     <ClInclude Include="Include\GL\glew.h" />
     <ClInclude Include="Include\GL\glxew.h" />
     <ClInclude Include="Include\GL\wglew.h" />
+    <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Common.h" />
     <ClInclude Include="Source\Cube.h" />
     <ClInclude Include="Source\glad.h" />
     <ClInclude Include="Source\Scene.h" />
+    <ClInclude Include="Source\SceneObject.h" />
+    <ClInclude Include="Source\Shader.h" />
+    <ClInclude Include="Source\ShaderSourceCode.h" />
+    <ClInclude Include="Source\Sprite.h" />
     <ClInclude Include="Source\stb_image.h" />
     <ClInclude Include="Source\TexturedCubeScene.h" />
+    <ClInclude Include="Source\Transform.h" />
+    <ClInclude Include="Source\VertexShader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

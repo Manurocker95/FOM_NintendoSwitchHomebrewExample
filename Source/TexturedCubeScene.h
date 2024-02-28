@@ -1,9 +1,6 @@
 #pragma once
 #include "Scene.h"
 
-#include "stb_image.h"
-#include "Cube.h"
-
 namespace Manurocker95
 {
 	class TexturedCubeScene : public Scene

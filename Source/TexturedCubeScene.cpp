@@ -1,4 +1,6 @@
 #include "TexturedCubeScene.h"
+#include "stb_image.h"
+#include "Cube.h"
 
 namespace Manurocker95
 {
